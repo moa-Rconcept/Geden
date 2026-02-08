@@ -640,6 +640,12 @@ footer {
   padding: 6px;
 }
 
+.logo-ref {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .ref-title {
     margin: 0.25rem 0 8px;
     color: var(--ink);
@@ -1239,6 +1245,10 @@ section.section.problematiques {
     max-width:calc(100% - 36px);
   }
   .modal__header{ align-items:flex-start; }
+}
+
+.modal__content {
+    padding: 20px 0;
 }
 
 
