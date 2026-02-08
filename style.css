@@ -1164,6 +1164,27 @@ section.section.problematiques {
 }
 
 /* ===== MEDIA QUERIES ===== */
+
+
+@media screen  and (max-width: 768px) {
+
+    .hero__bg {
+    background-position-y: inherit;
+  }
+
+  .hero__inner {
+    padding: 0 20px;;
+  }
+
+   .hero h1{
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    line-height: 1.1;
+    margin: 0;
+  }
+
+}
+
+
 @media (min-width: 640px) {
   .menu {
     display: flex;
@@ -1182,6 +1203,8 @@ section.section.problematiques {
 }
 
 @media (min-width: 768px) {
+
+
   .band__row {
     flex-direction: row;
     justify-content: space-between;
