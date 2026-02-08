@@ -95,6 +95,15 @@ a {
   background: #fff;
 }
 
+#menu.active {
+  position: absolute;
+  top: 80px;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  border-top: 1px solid;
+}
+
 /* Hero */
 .hero {
   position: relative;
