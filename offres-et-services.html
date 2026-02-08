@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header commun -->
+
+  <!-- Header (liens vers pages, pas d’ancres) -->
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
@@ -21,7 +22,7 @@
       <nav class="menu" id="menu">
         <a href="presentation.html">Présentation</a>
         <a href="problematiques-et-enjeux.html">Problématiques et Enjeux</a>
-        <a href="offres-et-services.html" aria-current="page">Offres & Services</a>
+        <a href="offres-et-services.html">Offres & Services</a>
         <a href="references.html">Références</a>
         <a href="contact.html" class="btn btn-primary">Nous contacter</a>
       </nav>
@@ -185,14 +186,16 @@
     </section>
   </main>
 
-  <!-- Footer commun -->
+  <!-- Footer -->
   <footer>
     <div class="container foot">
       <p>© <span id="year"></span> GeDEN. Tous droits réservés.</p>
       <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></p>
     </div>
   </footer>
-
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="main.js"></script>
+  
 </body>
 </html>

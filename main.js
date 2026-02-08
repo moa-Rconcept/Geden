@@ -58,3 +58,59 @@ $toggle.on('click', function () {
   sortCardsIn('passees');
   sortCardsIn('encours');
 })();
+
+// --- Team modal ---
+(function () {
+  const $modal = $('#teamModal');
+  const $panel = $modal.find('.modal__panel');
+
+  function openModal({ name, role, photoSrc, photoAlt, html }) {
+    $modal.find('.modal__title').text(name);
+    $modal.find('.modal__role').text(role);
+
+    $modal.find('.modal__photo')
+      .attr('src', photoSrc)
+      .attr('alt', photoAlt || name);
+
+    $modal.find('.modal__content').html(html);
+
+    $modal.addClass('is-open').attr('aria-hidden', 'false');
+    $('body').css('overflow', 'hidden');
+  }
+
+  function closeModal() {
+    $modal.removeClass('is-open').attr('aria-hidden', 'true');
+    $('body').css('overflow', '');
+  }
+
+  // Ouvrir
+  $(document).on('click', '.team-more', function () {
+    const $card = $(this).closest('.team-card');
+
+    const name = $card.find('.team-name').first().text().trim();
+    const role = $card.find('.role').first().text().trim();
+    const $img = $card.find('img').first();
+
+    const photoSrc = $img.attr('src');
+    const photoAlt = $img.attr('alt');
+
+    const html = $card.find('.team-full').first().html() || '';
+
+    openModal({ name, role, photoSrc, photoAlt, html });
+  });
+
+  // Fermer (bouton + backdrop)
+  $modal.on('click', '.modal__close, .modal__backdrop', function () {
+    closeModal();
+  });
+
+  // Fermer au clic en dehors du panel (sécurité)
+  $modal.on('click', function (e) {
+    if (!$(e.target).closest($panel).length) closeModal();
+  });
+
+  // Fermer avec ESC
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape' && $modal.hasClass('is-open')) closeModal();
+  });
+})();
