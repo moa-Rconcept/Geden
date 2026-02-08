@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GeDEN — Contact</title>
+  <meta name="description" content="Contactez GeDEN : adresse, email et téléphone. Envoyez-nous votre demande ou votre cahier des charges." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header commun -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Logo GeDEN" height="80">
+        <div class="brand__title">
+          <!-- <div class="brand__name">GeDEN</div> -->
+          <div class="brand__tag">Gestion Durable des Espaces Naturels</div>
+        </div>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="presentation.html">Présentation</a>
+        <a href="problematiques-et-enjeux.html">Problématiques et Enjeux</a>
+        <a href="offres-et-services.html">Offres & Services</a>
+        <a href="references.html">Références</a>
+        <a href="contact.html" class="btn btn-primary" aria-current="page">Nous contacter</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Titre -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="h1">Nous contacter</h1>
+      <p class="subtitle">Parlez-nous de votre besoin, on vous répond vite.</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding:40px 0 64px">
+    <!-- Cartes de contact -->
+    <section class="section">
+      <div class="contact-cards">
+        <article class="contact-card">
+          <div class="contact-card__icon" aria-hidden="true">📍</div>
+          <h3>Adresse</h3>
+          <p>10 place de la Résistance<br>66130 Ille-sur-Têt — FRANCE</p>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-card__icon" aria-hidden="true">✉️</div>
+          <h3>Email</h3>
+          <p><a href="mailto:contact@geden.fr">contact@geden.fr</a></p>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-card__icon" aria-hidden="true">☎️</div>
+          <h3>Téléphone</h3>
+          <p><a href="tel:+33778645482">+33 7 77 86 45 82</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Formulaire -->
+    <section class="section" style="margin-top:24px">
+      <div class="ribbon">Formulaire de contact</div>
+
+      <!-- Remplace action par ton endpoint (Formspree, backend, etc.) -->
+      <form class="form" id="contactForm" method="post" action="" enctype="multipart/form-data" novalidate>
+        <!-- Honeypot anti-spam -->
+        <div class="visually-hidden">
+          <label>Ne pas remplir si vous êtes humain
+            <input name="company" type="text" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="lastname">Nom <span class="req">*</span></label>
+            <input id="lastname" name="lastname" type="text" required autocomplete="family-name">
+          </div>
+
+          <div class="form-field">
+            <label for="firstname">Prénom</label>
+            <input id="firstname" name="firstname" type="text" autocomplete="given-name">
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Téléphone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Objet <span class="req">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="" selected disabled>Choisir…</option>
+              <option>Demande d’information</option>
+              <option>Devis / cahier des charges</option>
+              <option>Partenariat / expertise</option>
+              <option>Autre</option>
+            </select>
+          </div>
+
+          <div class="form-field form-field--full">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-field form-field--full">
+            <label for="file">Pièce jointe (facultatif)</label>
+            <input id="file" name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg">
+            <small class="hint">Max. 10&nbsp;Mo — évitez les caractères spéciaux dans le nom du fichier.</small>
+          </div>
+
+          <div class="form-field form-field--full">
+            <label class="check">
+              <input type="checkbox" required name="rgpd">
+              <span>Je consens à ce que mes données soient utilisées pour répondre à ma demande. (Aucune cession à des tiers.)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <p class="form-note">* Champs obligatoires</p>
+        </div>
+
+        <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+          Merci, votre message a bien été envoyé. Nous revenons vers vous rapidement.
+        </div>
+      </form>
+    </section>
+
+    <!-- Carte -->
+    <section class="section" style="margin-top:24px">
+      <div class="ribbon">Où nous trouver</div>
+      <div class="map-wrap">
+        <!-- Option 1 : iframe Google Maps -->
+        <iframe
+          title="Localisation GeDEN"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=10+place+de+la+R%C3%A9sistance,+66130+Ille-sur-T%C3%AAt,+France&output=embed">
+        </iframe>
+
+        <!-- Option 2 (à la place de l'iframe) : image statique locale
+        <img src="img/map-ille-sur-tet.jpg" alt="Plan d’accès GeDEN">
+        -->
+      </div>
+    </section>
+
+    <!-- Bande CTA -->
+    <!-- <section class="band" style="margin-top:24px">
+      <div class="band__row container">
+        <h2 style="color: #fff;">Un projet à lancer&nbsp;?</h2>
+        <a href="mailto:contact@geden.fr" class="btn btn-white">contact@geden.fr</a>
+      </div>
+    </section> -->
+  </main>
+
+  <!-- Footer commun -->
+  <footer>
+    <div class="container foot">
+      <p>© <span id="year"></span> GeDEN. Tous droits réservés.</p>
+      <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- (Optionnel) confirmation sans backend -->
+  <script>
+    // Supprime ce block si tu postes réellement le formulaire.
+    const form = document.getElementById('contactForm');
+    const ok = document.getElementById('formSuccess');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        if (!form.action) { // pas d'endpoint -> on fake l'envoi
+          e.preventDefault();
+          ok.hidden = false;
+          form.reset();
+          form.scrollIntoView({behavior: 'smooth'});
+        }
+      });
+    }
+  </script>
+</body>
+</html>
