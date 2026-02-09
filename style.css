@@ -848,6 +848,7 @@ footer {
 
 .team-content {
   padding: 1rem 1.25rem;
+  position: relative;
 }
 
 .team-content h3 {
@@ -1180,7 +1181,10 @@ section.section.problematiques {
 }
 
 .team-more{
-  margin-top:12px;
+    margin-top: 12px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
 /* Modal */
