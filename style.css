@@ -945,7 +945,7 @@ main.container > .section .bullets {
 }
 
 /* Enjeux : bandeau + cartes pictos */
-.section.enjeux {
+.section.enjeux, .section.permet {
   padding: 0 0 24px 0;
 }
 
@@ -1251,11 +1251,16 @@ section.section.problematiques {
     padding: 20px 0;
 }
 
+  section.section.permet .en-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 12px;
+    gap: 12px;
+  }
 
 /* ===== MEDIA QUERIES ===== */
 
 
-@media screen  and (max-width: 768px) {
+@media (max-width: 768px) {
 
     .hero__bg {
     background-position-y: inherit;
@@ -1301,16 +1306,32 @@ section.section.problematiques {
     border-radius: 0;
   }
 
+  section.section.enjeux .en-grid, .section.problematiques .en-grid, section.section.permet .en-grid {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 12px;
+    gap: 12px;
+  }
+
+  .section.contact {
+    padding: 12px;;
+  }
+
 }
 
+@media (min-width: 1024px) {
 
-@media (min-width: 640px) {
   .menu {
     display: flex;
   }
   .menu-toggle {
     display: none;
   }
+
+}
+
+
+@media (min-width: 769px) {
+
   .goals {
     grid-template-columns: repeat(2, 1fr);
   }
