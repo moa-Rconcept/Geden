@@ -114,3 +114,34 @@ $toggle.on('click', function () {
     if (e.key === 'Escape' && $modal.hasClass('is-open')) closeModal();
   });
 })();
+
+// Accordion années - jQuery
+$(function () {
+  // Ouvre/ferme au clic
+  $('.pubs-acc').on('click', '.pubs-year__toggle', function () {
+    var $year = $(this).closest('.pubs-year');
+    var $panel = $year.find('.pubs-year__panel');
+
+    // Option: un seul dropdown ouvert à la fois
+    var $others = $year.siblings('.pubs-year.is-open');
+    $others.removeClass('is-open')
+      .find('.pubs-year__toggle').attr('aria-expanded', 'false').end()
+      .find('.pubs-year__panel').stop(true, true).slideUp(180);
+
+    // Toggle actuel
+    var isOpen = $year.hasClass('is-open');
+    $year.toggleClass('is-open', !isOpen);
+    $(this).attr('aria-expanded', String(!isOpen));
+    $panel.stop(true, true).slideToggle(180);
+  });
+
+  // Init: si un panel est en display:block, on met l'état "open"
+  $('.pubs-year').each(function(){
+    var $p = $(this).find('.pubs-year__panel');
+    if ($p.is(':visible')) {
+      $(this).addClass('is-open')
+        .find('.pubs-year__toggle').attr('aria-expanded', 'true');
+    }
+  });
+});
+
