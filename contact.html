@@ -67,9 +67,7 @@
       <div class="ribbon">Formulaire de contact</div>
 
       <!-- Remplace action par ton endpoint (Formspree, backend, etc.) -->
-      <form class="form" id="contactForm" method="post" action="" enctype="multipart/form-data" novalidate>
-        <!-- Honeypot anti-spam -->
-        <div class="visually-hidden">
+      <form class="form" id="contactForm" method="post" action="" data-endpoint="" data-recipient="contact@geden.fr" data-logo-url="https://geden.fr/logo.png" enctype="multipart/form-data" novalidate>        <div class="visually-hidden">
           <label>Ne pas remplir si vous êtes humain
             <input name="company" type="text" tabindex="-1" autocomplete="off">
           </label>
@@ -172,22 +170,6 @@
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="main.js"></script>
-
-  <!-- (Optionnel) confirmation sans backend -->
-  <script>
-    // Supprime ce block si tu postes réellement le formulaire.
-    const form = document.getElementById('contactForm');
-    const ok = document.getElementById('formSuccess');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        if (!form.action) { // pas d'endpoint -> on fake l'envoi
-          e.preventDefault();
-          ok.hidden = false;
-          form.reset();
-          form.scrollIntoView({behavior: 'smooth'});
-        }
-      });
-    }
-  </script>
+  <script src="formulaire.js"></script>
 </body>
 </html>
