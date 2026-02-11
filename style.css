@@ -31,7 +31,7 @@ body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 img {
@@ -229,10 +229,12 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-shadow: 0 6px 20px rgba(4, 55, 82, 0.06);
 }
 
 .card h3 {
   margin: 0 0 8px;
+  font-size: 1.35rem;
 }
 
 .card--blue h3 {
@@ -378,8 +380,7 @@ footer {
 .hero__veil {
   position: absolute;
   inset: 0;
-  background: #0b1220;
-  opacity: 0.58;
+  background: linear-gradient(135deg, rgba(4, 55, 82, 0.82), rgba(31, 74, 122, 0.68));
   z-index: -1;
 }
 
@@ -397,9 +398,10 @@ footer {
 }
 
 .hero p {
-  margin-top: 12px;
+  margin-top: 14px;
   color: #e2e8f0;
   max-width: 60ch;
+  font-size: 1.15rem;
 }
 
 .cta {
@@ -986,6 +988,11 @@ section.section.problematiques {
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ref-figure--unesco img {
+  height: 280px;
+  object-position: top;
 }
 
 .ref-text .bullets.tight li {
