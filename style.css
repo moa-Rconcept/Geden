@@ -430,6 +430,118 @@ footer {
   font-weight: 900;
 }
 
+.section-head {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.home-highlights {
+  padding-bottom: 28px;
+}
+
+.highlights-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.highlight-card {
+  background: #f8fafc;
+  border: 1px solid var(--ring);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(4, 55, 82, 0.05);
+}
+
+.highlight-number {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.highlight-card h3 {
+  margin: 0 0 8px;
+}
+
+.section-method {
+  border-top: 1px solid var(--ring);
+  border-bottom: 1px solid var(--ring);
+}
+
+.process-flow {
+  display: grid;
+  gap: 16px;
+}
+
+.process-step {
+  background: #fff;
+  border: 1px solid var(--ring);
+  border-radius: 16px;
+  padding: 18px;
+  position: relative;
+}
+
+.process-step span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fff;
+  background: var(--orange);
+  margin-bottom: 10px;
+}
+
+.process-step h3 {
+  margin: 0 0 6px;
+}
+
+.case-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.case-card {
+  background: #fff;
+  border: 1px solid var(--ring);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(4, 55, 82, 0.07);
+}
+
+.case-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.case-card div {
+  padding: 16px;
+}
+
+.case-card h3 {
+  margin: 0 0 8px;
+}
+
+.trust-logos {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.trust-logos img {
+  width: 100%;
+  height: 95px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--ring);
+  border-radius: 14px;
+  padding: 12px;
+}
+
 /* ==========================================================================
    5) GABARITS PAGES (Page hero / sections)
    ========================================================================== */
@@ -527,6 +639,7 @@ main.container > .section .bullets {
 .section.permet .en-grid {
   grid-template-columns: repeat(2, 1fr);
 }
+
 
 /* Hero “enjeux” */
 .enjeux-hero {
@@ -1487,6 +1600,13 @@ section.section.problematiques {
     justify-content: space-between;
     align-items: center;
   }
+
+  .highlights-grid,
+  .case-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .process-flow { grid-template-columns: repeat(2, 1fr); }
+
+  .trust-logos { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ---- >= 769px ---- */
@@ -1517,6 +1637,8 @@ section.section.problematiques {
 
   .ref-card { grid-template-columns: 280px 1fr; }
   .ref-grid { grid-template-columns: 1fr 320px; }
+
+  .process-flow { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* ---- >= 1024px ---- */
