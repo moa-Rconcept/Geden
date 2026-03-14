@@ -1619,14 +1619,39 @@ section.section.problematiques {
   }
 }
 
+/* --- <= 991px --- */
+@media (max-width: 991px) {
+
+  .logo-ref {
+      flex-direction: row;
+  }
+
+  .ref-client {
+    gap: 10px;
+  }
+
+  .logo-ref img {
+      max-width: 80px;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+}
+
+
 /* ---- >= 900px ---- */
 @media (min-width: 900px) {
+
   .en-grid { grid-template-columns: repeat(3, 1fr); }
   .services-cards { grid-template-columns: repeat(3, 1fr); }
+
 }
 
 /* ---- >= 992px ---- */
 @media (min-width: 992px) {
+
   .cards { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr 420px; }
   .grid-2.alt.reverse { grid-template-columns: 64% 1fr; }
@@ -1635,16 +1660,31 @@ section.section.problematiques {
 
   .tools { grid-template-columns: repeat(3, 1fr); }
 
-  .ref-card { grid-template-columns: 280px 1fr; }
-  .ref-grid { grid-template-columns: 1fr 320px; }
+  .ref-card { 
+    grid-template-columns: 280px 1fr; 
+  }
 
-  .process-flow { grid-template-columns: repeat(4, 1fr); }
+  .ref-grid { 
+    grid-template-columns: 1fr 320px;
+  }
+
+  .process-flow { 
+    grid-template-columns: repeat(4, 1fr);
+  }
+
 }
 
 /* ---- >= 1024px ---- */
-@media (min-width: 1024px) {
-  .menu { display: flex; }
-  .menu-toggle { display: none; }
+@media (min-width: 1090px) {
+
+  .menu { 
+    display: flex; 
+  }
+
+  .menu-toggle { 
+    display: none; 
+  }
+
 }
 
 /* ---- >= 1200px ---- */
