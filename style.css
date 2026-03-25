@@ -1555,8 +1555,12 @@ section.section.problematiques {
   }
 
   .white p {
-  font-size: 14px;;
-}
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 14px;;
+  }
 
 
   /* Home hero */
