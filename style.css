@@ -54,6 +54,7 @@ a {
 h2 {
   color: var(--ink);
   margin: 0 0 10px;
+  font-size: 28px;
 }
 
 /* ==========================================================================
@@ -137,6 +138,10 @@ section {
 
 .white {
   background: #fff;
+}
+
+.white p {
+  font-size: 18px;;
 }
 
 .compact {
@@ -1544,6 +1549,15 @@ section.section.problematiques {
 
 /* ---- <= 768px ---- */
 @media (max-width: 768px) {
+
+  h2 {
+    font-size: 20px;;
+  }
+
+  .white p {
+  font-size: 14px;;
+}
+
 
   /* Home hero */
   .hero__bg { background-position-y: inherit; }
